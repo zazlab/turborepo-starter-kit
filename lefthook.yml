@@ -1,0 +1,12 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: biome
+      stage_fixed: true
+      run: npm exec -- biome check {staged_files} --write
